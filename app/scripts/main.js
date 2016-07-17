@@ -22,7 +22,7 @@ var showQuestion = function(question) {
     // set some properties related to asker
     var asker = result.find('.asker');
     asker.html('<p>Name: <a target="_blank" '+
-        'href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
+        'href=//stackoverflow.com/users/' + question.owner.user_id + ' >' +
         question.owner.display_name +
         '</a></p>' +
         '<p>Reputation: ' + question.owner.reputation + '</p>'
@@ -59,10 +59,10 @@ var getUnanswered = function(tags) {
     };
 
     $.ajax({
-        url: "http://api.stackexchange.com/2.2/questions/unanswered",
+        url: '//api.stackexchange.com/2.2/questions/unanswered',
         data: request,
-        dataType: "jsonp",//use jsonp to avoid cross origin issues
-        type: "GET",
+        dataType: 'jsonp',//use jsonp to avoid cross origin issues
+        type: 'GET',
     })
     .done(function(result){ //this waits for the ajax to return with a succesful promise object
         var searchResults = showSearchResults(request.tagged, result.items.length);
@@ -88,7 +88,7 @@ $(document).ready( function() {
         // zero out results if previous search has run
         $('.results').html('');
         // get the value of the tags the user submitted
-        var tags = $(this).find("input[name='tags']").val();
+        var tags = $(this).find('input[name=\'tags\']').val();
         getUnanswered(tags);
     });
 });
