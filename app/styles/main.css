@@ -45,3 +45,23 @@
   background-color: #F78181;
   padding: 1em;
 }
+
+.top-answerers {
+  overflow: auto;
+}
+
+.top-answerers img {
+  float: left;
+
+}
+.answerer-info {
+  display: inline;
+}
+
+.answerer-info dd {
+  padding-bottom: 5px;
+}
+
+.answerer-info dt, .answerer-info dd {
+  margin-left: 175px;
+}

@@ -1,107 +1,122 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>stackerAJAX gh pages</title>
+<head>
+   <meta charset="utf-8">
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>stackerAJAX gh pages</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+   <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+   <!-- build:css styles/vendor.css -->
+   <!-- bower:css -->
+   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+   <!-- endbower -->
+   <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+   <!-- build:css styles/main.css -->
+   <link rel="stylesheet" href="styles/main.css">
+   <!-- endbuild -->
 
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    <div class="container">
-    <div class="intro">
+<div class="container">
+   <div class="intro">
       <div class="left stack-image"></div>
       <div class="explanation">
-        <h1>StackOverflow Reputation Builder</h1>
-        <p>This app lets you search by topic for unanswered questions on Stack Overflow to help you build your reputation.  Find unanswered questions for a topic you know about, write quality answers, and watch your reputation go up.</p>
-        <p>Sometimes, you also need some inspiration. This page also lets you search for the top answerers for a tag. If you want to rise to the top ranks for a topic, see how many reputation points you'll need to aim for!</p>
+         <h1>StackOverflow Reputation Builder</h1>
+         <p>This app lets you search by topic for unanswered questions on Stack Overflow to help you build your reputation.  Find unanswered questions for a topic you know about, write quality answers, and watch your reputation go up.</p>
+         <p>Sometimes, you also need some inspiration. This page also lets you search for the top answerers for a tag. If you want to rise to the top ranks for a topic, see how many reputation points you'll need to aim for!</p>
       </div>
-    </div>
-    <hr>
-    <div class="stack">
+   </div>
+   <hr>
+   <div class="stack">
       <h3>Get Unanswered Questions</h3>
       <p>Find unanswered questions by tag. For multiple tags, use a semi-colon to separate.</p>
       <form class="unanswered-getter">
-        <input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
-        <input type="submit" value="Submit">
+         <input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
+         <input type="submit" value="Submit">
       </form>
       <h3>View the Top Answerers for a Tag</h3>
       <form class="inspiration-getter">
-        <input type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
-        <input type="submit" value="Submit">
+         <input type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
+         <input type="submit" value="Submit">
       </form>
-    </div>
-    <div class="results-container">
+   </div>
+   <div class="results-container">
       <div class="search-results"></div>
       <div class="results"></div>
-    </div>
-  </div>
-  <div class="templates hidden">
-    <dl class="result question">
+   </div>
+
+
+</div>
+<div class="templates hidden">
+   <dl class="result question">
       <dt>Question</dt>
-        <dd class="question-text"><a href="" target="_blank"></a></dd>
+      <dd class="question-text"><a href="" target="_blank"></a></dd>
       <dt>Asked</dt>
-        <dd class="asked-date"></dd>
+      <dd class="asked-date"></dd>
       <dt>Viewed</dt>
-        <dd class="viewed"></dd>
+      <dd class="viewed"></dd>
       <dt>Asker</dt>
-        <dd class="asker"></dd>
-    </dl>
-    <div class="error">
-      <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
-    </div>
-  </div>
+      <dd class="asker"></dd>
+   </dl>
+<div class="error">
+   <p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+</div>
+<div class="result top-answerers">
+   <img src="">
+   <dl class="answerer-info">
+      <dt>User</dt>
+      <dd class="user-text"></dd>
+      <dt>Score</dt>
+      <dd class="score-text"></dd>
+      <dt>Posts</dt>
+      <dd class="posts-text"></dd>
+   </div>
+</div>
+</div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-80275020-1');ga('send','pageview');
-    </script>
+   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+   e.src='https://www.google-analytics.com/analytics.js';
+   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+   ga('create','UA-80275020-1');ga('send','pageview');
+</script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/button.js"></script>
-    <script src="/bower_components/bootstrap/js/popover.js"></script>
-    <script src="/bower_components/bootstrap/js/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <!-- endbuild -->
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/bootstrap/js/affix.js"></script>
+<script src="/bower_components/bootstrap/js/alert.js"></script>
+<script src="/bower_components/bootstrap/js/dropdown.js"></script>
+<script src="/bower_components/bootstrap/js/tooltip.js"></script>
+<script src="/bower_components/bootstrap/js/modal.js"></script>
+<script src="/bower_components/bootstrap/js/transition.js"></script>
+<script src="/bower_components/bootstrap/js/button.js"></script>
+<script src="/bower_components/bootstrap/js/popover.js"></script>
+<script src="/bower_components/bootstrap/js/carousel.js"></script>
+<script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+<script src="/bower_components/bootstrap/js/collapse.js"></script>
+<script src="/bower_components/bootstrap/js/tab.js"></script>
+<!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
 </html>
